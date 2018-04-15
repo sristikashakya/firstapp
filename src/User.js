@@ -10,14 +10,14 @@ class User extends Component{
 	render(){
 		return(
 				<div>
-					<h1 onClick={()=> this.handleClick(this.state.fullName)}>this is {this.props.firstName +' '+ this.props.lstName}!</h1>
-					<p>{this.state.username}</p>
-					<input name='username' type='text' value={this.state.username} onChange={(event) =>this.handleChange(event)} />
+					<h1 onClick={()=> this.handleClick(this.state.fullName)}>this is {this.props.detail.name +' '+ this.props.age}!</h1>
+					<p>hi! {this.state.username}</p>
+					<input name='username' type='text' value={this.state.username} onChange={() =>this.handleClick()} />
 				</div>
 			)
 	}
 	handleClick = function() {
-		alert(this.state.fullName + ' clicked')
+		alert(this.state.username + ' clicked')
 	}
 	handleChange = function(event){
 		this.setState({
