@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Header from './components/Header';
+import Table from './components/Tables';
 class App extends Component {
   
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div>
         <MuiThemeProvider>
          <Header />
+         <Table />
          </MuiThemeProvider>
       </div>
     )
