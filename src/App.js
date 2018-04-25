@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Header from './components/Header';
 import Table from './components/Tables';
+import Login from './components/Login';
 class App extends Component {
   
   render() {
@@ -11,7 +12,9 @@ class App extends Component {
         <MuiThemeProvider>
          <Header />
          <Table />
+          <Login />
          </MuiThemeProvider>
+
       </div>
     )
   }
