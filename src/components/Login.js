@@ -1,4 +1,7 @@
 import React,{ Component } from 'react'
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
+import logo from '../assets/download.jpg'
 class Login extends Component{
 	constructor(props){
 		super(props)
@@ -10,17 +13,22 @@ class Login extends Component{
 	render(){
 		return(
 				<div>
-					<form>
-						Email= <input type = 'text' placeholder='email' value = {this.state.email} onChange = {(event) => this.onChangeEmail(event)}/><br /><br/>
-						API Key = <input type = 'text' placeholder='apikey' value = {this.state.API} onChange = {(event) => this.onChangeAPI(event)}/><br/><br/>
-						<input type="Submit" onClick = {(event) => this.handleClick(event)}/>
-					</form>
+					<Card>
+						<CardHeader avatar={logo} />
+							<CardText>
+								Email= <input type = 'text' placeholder='email' value = {this.state.email} onChange = {(event) => this.onChangeEmail(event)}/><br /><br/>
+								API Key = <input type = 'text' placeholder='apikey' value = {this.state.API} onChange = {(event) => this.onChangeAPI(event)}/><br/><br/>
+							</CardText>
+							 <CardActions>
+								<FlatButton label="Submit" onClick = {(event) => this.handleClick(event)} />
+							</CardActions>
+					</Card>
 				</div>
 			)
 	}
 	handleClick = function(event){
 		event.preventDefault()
-		fetch('https://api.rebrandly.com/v1/account',
+		fetch('https://api.rebrandly.com/v1/accounts',
 		{
 			headers: {
 				apikey: this.state.API
