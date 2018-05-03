@@ -10,7 +10,7 @@ class Header extends Component{
 	render(){
 		return(
 				<div>
-					<AppBar title="Sgaramatha" 
+					<AppBar title="FoodPoint" 
 					onLeftIconButtonClick={()=>this.toggleSidebar()} />
 					<Drawer
 						open= {this.state.open}
