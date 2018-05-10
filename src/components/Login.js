@@ -2,6 +2,7 @@ import React,{ Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import logo from '../assets/download.jpg'
+
 class Login extends Component{
 	constructor(props){
 		super(props)
@@ -28,7 +29,7 @@ class Login extends Component{
 	}
 	handleClick = function(event){
 		event.preventDefault()
-		fetch('https://api.rebrandly.com/v1/accounts',
+		fetch('https://api.rebrandly.com/v1/account',
 		{
 			headers: {
 				apikey: this.state.API
